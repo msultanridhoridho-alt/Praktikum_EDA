@@ -5,7 +5,7 @@ Repositori ini berisi hasil diagnosis kualitas data (Data Quality Report) untuk 
 ## 📌 Deskripsi
 Sesuai instruksi pertemuan 4, fokus tugas ini adalah **mendiagnosis dan mengidentifikasi** anomali data berdasarkan 5 dimensi kualitas (Kelengkapan, Keunikan, Konsistensi, Validitas, dan Akurasi). Pada tahap ini **belum dilakukan perbaikan data (*cleaning*)**; seluruh cacat data hanya dicatat beserta rencana penanganannya untuk pertemuan selanjutnya.
 
-## 📂 Isi Repositori
+## 📂 Isi branc
 1. **`Tugas_Kelompok_M2_Bakery_Final.ipynb`** : *Jupyter Notebook* berisi kode 9 langkah pemeriksaan kualitas data, termasuk pengujian 5 aturan validitas bisnis dan 1 aturan hubungan antarkolom.
 2. **`profil_kualitas_data_bakery.csv`** : Tabel laporan profil kualitas data (DQR) yang merangkum semua masalah yang ditemukan, jumlah baris yang terdampak, tingkat keparahan, dan rencana tindakan perbaikannya.
 3. **`Bakery sales (2).csv`** : Dataset mentah yang dianalisis.

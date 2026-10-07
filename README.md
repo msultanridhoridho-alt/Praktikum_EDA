@@ -1,25 +1,16 @@
-## Bagian F — Checkpoint proyek
+# M2 — Data Quality Report: Bakery Sales
 
-**1. Dimensi dan Satuan Data**
-- Dataset ini memiliki **1.212 baris** dan **11 kolom**.
-- **Satuan baris:** Satu baris merepresentasikan satu riwayat transaksi penjualan.
+Repositori ini berisi hasil diagnosis kualitas data (Data Quality Report) untuk dataset transaksi *Bakery Sales*. Tugas ini merupakan pemenuhan Milestone 2 (M2) untuk mata kuliah Exploratory Data Analysis.
 
-**2. Pengelompokan Tipe Kolom**
-- **Tanggal:** `tanggal`
-- **Numerik:** `jumlah`, `harga_satuan`, `diskon_persen`, `rating_pelanggan`, `total_bayar`
-- **Kategorikal:** `id_transaksi`, `kota`, `kategori`, `produk`, `metode_bayar`
+## 📌 Deskripsi
+Sesuai instruksi pertemuan 4, fokus tugas ini adalah **mendiagnosis dan mengidentifikasi** anomali data berdasarkan 5 dimensi kualitas (Kelengkapan, Keunikan, Konsistensi, Validitas, dan Akurasi). Pada tahap ini **belum dilakukan perbaikan data (*cleaning*)**; seluruh cacat data hanya dicatat beserta rencana penanganannya untuk pertemuan selanjutnya.
 
-**3. Masalah pada Data**
-- **Data Kosong:** Terdapat data yang hilang (null) pada kolom `rating_pelanggan` dan `metode_bayar`.
-- **Tipe Data Salah:** Kolom `tanggal` masih dibaca sebagai teks, seharusnya diubah ke format waktu (datetime).
-- **Nilai Tidak Konsisten:** Penulisan nama kota berantakan karena perbedaan huruf besar/kecil (contoh: "Depok" dan "DEPOK"), serta ada salah ketik tahun pada awalan `id_transaksi`.
+## 📂 Isi Repositori
+1. **`Tugas_Kelompok_M2_Bakery_Final.ipynb`** : *Jupyter Notebook* berisi kode 9 langkah pemeriksaan kualitas data, termasuk pengujian 5 aturan validitas bisnis dan 1 aturan hubungan antarkolom.
+2. **`profil_kualitas_data_bakery.csv`** : Tabel laporan profil kualitas data (DQR) yang merangkum semua masalah yang ditemukan, jumlah baris yang terdampak, tingkat keparahan, dan rencana tindakan perbaikannya.
+3. **`Bakery sales (2).csv`** : Dataset mentah yang dianalisis.
 
-**4. Kecukupan Data**
-- **Sudah cukup** jika analisis tim berfokus pada tren penjualan produk, kategori terlaris, atau efektivitas metode pembayaran.
-- **Belum cukup** jika tim ingin menghitung profit/keuntungan bersih (karena tidak ada data Harga Pokok Penjualan/modal) atau menganalisis loyalitas pembeli (karena tidak ada ID Pelanggan).
-
-**Nama Anggota
-- **MUHAMMAD SULTAN RIDHO** 0110225099
-- **ALFANDI PANCA SAPUTRA** 0110225026
-- **DZAKWAN ABDUR RASYID** 0110225036
-- **MUMTAAZ ABDURRAHMAN** 0110225164
+## 🚨 Ringkasan Temuan Utama
+* **Tipe Data Kritis:** Kolom `unit_price` tidak bisa dikalkulasi karena terbaca sebagai teks (mengandung simbol `€` dan koma). Kolom `date` dan `time` juga belum berformat *datetime*.
+* **Duplikat Tersembunyi:** Ditemukan **1.210 baris duplikat** yang awalnya tidak terdeteksi karena keberadaan kolom indeks bawaan (`Unnamed: 0`).
+* **Anomali Validitas Bisnis:** Ditemukan **1.295 transaksi** dengan kuantitas bernilai nol atau negatif (kemungkinan retur/batal), serta **32 transaksi** dengan harga nol/negatif.

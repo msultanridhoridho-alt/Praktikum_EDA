@@ -1,0 +1,6 @@
+dimensi,kolom,masalah,jumlah,persen,keparahan,rencana
+Tipe data,date & time,Format tersimpan sebagai teks (object),234005,100.0,Sedang,Konversi menggunakan pd.to_datetime()
+Keunikan,Semua (tanpa index),Terdapat duplikat transaksi nyaris (tertutup kolom index),1210,0.52,Sedang,"Hapus kolom index, buang duplikat dan simpan satu"
+Tipe data,unit_price,Nilai tersimpan sebagai teks (mengandung € dan koma),234005,100.0,Tinggi,"Hapus simbol €, ganti koma dengan titik, konversi numerik"
+Validitas,Quantity,Nilai kuantitas barang nol atau negatif,1295,0.55,Tinggi,Telusuri apakah ini retur; bila bukan keluarkan dari analisis
+Validitas,unit_price,Harga barang nol atau negatif,32,0.01,Tinggi,Periksa apakah barang promosi atau data rusak

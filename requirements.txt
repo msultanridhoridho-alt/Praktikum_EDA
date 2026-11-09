@@ -1,0 +1,19 @@
+# Project EDA KMTI21133
+# Pasang dengan:  pip install -r requirements.txt
+#
+# Versi dikunci agar hasil analisis dapat direproduksi oleh tim lain
+# saat uji reproduktibilitas di Pertemuan 15.
+# Perbarui angka di bawah sesuai versi yang benar-benar tim Anda pakai:
+#   pip freeze | grep -iE "pandas|numpy|matplotlib|seaborn|scipy|scikit-learn"
+
+pandas==2.2.3
+numpy==2.1.3
+matplotlib==3.9.2
+seaborn==0.13.2
+scipy==1.14.1
+scikit-learn==1.5.2
+jupyterlab==4.3.0
+
+# Tambahkan di bawah ini bila tim Anda memakai pustaka lain
+# openpyxl==3.1.5        # untuk membaca berkas .xlsx
+# ydata-profiling==4.12.0 # untuk auto-EDA (Pertemuan 12)

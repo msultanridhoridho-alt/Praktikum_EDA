@@ -1,4 +1,4 @@
-# [Judul Proyek Tim]
+# Eksplorasi Data Penjualan Bakery (Bakery Sales)
 
 > Project Exploratory Data Analysis · KMTI21133 · Prodi Teknik Informatika STT-NF
 > Semester Ganjil 2026/2027
@@ -6,8 +6,8 @@
 ## Tim
 
 | Nama | NIM | Peran utama |
-|------|-----|-------------|
-|      |     |             |
+|Alfandi Panca Saputra|0110225026|-------------|
+|Muhammad Sultan Ridho|0110225099|             |
 |      |     |             |
 |      |     |             |
 
